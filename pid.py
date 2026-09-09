@@ -63,7 +63,7 @@ class Pid:
 
         # find who is min our I or the clamping value so that if I is more that
         # clamping value we clamp I (Anti wind up )
-        i = min(round(self.KI * self.accum_error,4),self.anti_wind_clamp)
+        i = min(round(self.KI * self.accum_error *dt,4),self.anti_wind_clamp)
 
         d = round(self.KD * (error_dif/dt),4)
 

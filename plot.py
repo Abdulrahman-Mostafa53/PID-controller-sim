@@ -119,4 +119,4 @@ class Plot:
             )
 
     def begin(self):
-        self.app.run(debug=True)
+        self.app.run(debug=True,port=8500)
